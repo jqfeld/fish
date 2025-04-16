@@ -7,7 +7,6 @@ if status is-interactive
 
   set -x EDITOR nvim
 
-  set -x SSH_AUTH_SOCK (gpgconf --list-dirs agent-ssh-socket)
   zoxide init fish | source
   starship init fish | source
 
@@ -16,7 +15,6 @@ if status is-interactive
   alias rs "source ~/.config/fish/config.fish"
   # source ~/.config/fish/conf.d/*
 
-  alias dotfiles "/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
   alias v "nvim"
   alias vj "nvim --listen /run/user/1000/nvim.julia.0"
   alias vl "nvim --listen /run/user/1000/nvim.latex.0"
@@ -44,7 +42,7 @@ if status is-interactive
 
 end
 
-set -x BAT_THEME "Catppuccin-mocha"
+# set -x BAT_THEME "Catppuccin-mocha"
 
 # Created by `pipx` on 2023-09-01 08:06:28
 set PATH $PATH /home/jk/.local/bin
